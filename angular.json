@@ -26,7 +26,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["src/assets/js/javatest.js"]
           },
           "configurations": {
             "production": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "OnlineExam"
+    }
+  },
+  "defaultProject": "OnlineExam",
+  "cli": {
+    "analytics": "1af814db-f1dd-45f7-8c98-672c73c4f86d"
+  }
 }

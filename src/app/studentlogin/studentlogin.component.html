@@ -1,0 +1,107 @@
+<html>
+<!--<p>Login here</p>-->
+<head>
+<title>Student Login Form</title>
+<style>
+
+input[type=text],select
+{
+    width:70%;
+    background-color:bisque;
+color:saddlebrown;
+padding: 12px20px;
+margin:8px0;
+display: inline-block;
+border:2pxsolidbrown;
+border-radius: 4px;
+box-sizing:border-box;
+         }
+
+input[type=email],select
+{
+width:70%;
+background-color:bisque;
+color:saddlebrown;
+padding: 12px20px;
+margin:8px0;
+display: inline-block;
+border:2pxsolidbrown;
+border-radius: 4px;
+box-sizing:border-box;
+         }
+input[type=password],select
+{
+width:70%;
+background-color:bisque;
+color:saddlebrown;
+padding: 12px20px;
+margin:8px0;
+display: inline-block;
+border:2pxsolidbrown;
+border-radius: 4px;
+box-sizing:border-box;
+         }
+input[type=number],select
+         {
+width:70%;
+background-color:bisque;
+color:saddlebrown;
+padding: 12px20px;
+margin:8px0;
+display: inline-block;
+border:2pxsolidbrown;
+border-radius: 4px;
+box-sizing:border-box;
+         }
+body
+         {
+
+background-color:rgb(141, 173, 201);
+text-align: center;
+width: 100%;
+         }
+        div
+         {
+                align-content: center;
+         }
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body id="t01">
+<h3 style="text-align: center"><i class="fa fa-align-center"aria-hidden="true" >Enter Your Details</i></h3><br><br>
+<div class="form">
+<form #addForm='ngForm'(ngSubmit)='addForm.valid && loginStudent()'>
+<div class="form-group">
+<br>
+     <label for="email" style="text-align: left;">Email Id : </label>
+    <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required [(ngModel)]='student.userEmail' #email=ngModel class="form-control" placeholder="enter email" aria-describedby="helpId" >
+   <!-- <div [hidden]="email.valid || email.pristine"><h5 style="color: red;font-style: italic;">***Email is required***</h5></div>-->
+    <div style="color: red" *ngIf="email.errors && addForm.submitted">Email is required & Put appropriate pattern of email</div>
+    <br>
+    <br>
+    <label for="password">Password: </label>
+    <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  ngModel passwordToggle id="password" required [(ngModel)]='student.userPassword' #password=ngModel class="form-control" placeholder="enter password" aria-describedby="helpId" >
+    <!--<div [hidden]="password.valid || password.pristine"><h5 style="color: red;font-style: italic;">***Password is required***</h5></div>-->
+    <div style="color: red" *ngIf="password.errors && addForm.submitted">Password is required & Put Correct Password</div>
+    <br>     
+    <br>
+    <button type="submit" class="btn btn-primary">Login</button>
+   <!-- <a routerLink] = '"/forgetpassword"'>ForgetPassword</a>-->
+    </div>
+    </form>
+    </div>
+    <ng-container  *ngIf="islogin" >
+        <a [routerLink] = '"/javatest"' style="color: black;"><b>Take Java Test</b></a>
+    </ng-container>
+      
+        <a [routerLink] = '"/dashboard"'>Back to Dashboard </a>
+    <br><br>
+    <a [routerLink] = '"/studentregistration"' style="color: black;"><b>Click Here To Register</b></a><br> 
+    </body>
+    </html>

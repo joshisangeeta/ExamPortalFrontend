@@ -1,0 +1,50 @@
+<table>
+    <thead>
+    <style>
+           
+   table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+     
+    td, th {
+      border: 1px solid #0e0d0d;
+      text-align: left;
+      padding: 8px;
+    }
+    tr,th{
+        background-color: white;
+    }
+     
+    tr:nth-child(even) {
+      background-color:bisque;
+    }
+    tr:nth-child(odd) {
+      background-color:aliceblue;
+    }
+    </style>
+
+    <tr>
+        
+        <th>Question</th>
+        <th>Option A</th>    
+        <th>Option B</th>
+        <th>Option C</th>
+        <th>Option D</th>
+        <th>CorrectAnswer</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let question of question'>
+            
+            <td>{{question.questions}}</td>
+            <td>{{question.optionA}}</td>
+            <td>{{question.optionB}}</td>
+            <td>{{question.optionC}}</td>
+            <td>{{question.optionD}}</td>
+            <td>{{question.correctAns}}</td>
+        </tr>
+    </tbody>
+    </table>
+

@@ -1,0 +1,3 @@
+
+export {​​​​​​​​ NgxPasswordToggleModule }​​​​​​​​ from './module'
+

@@ -1,0 +1,45 @@
+<table>
+    <thead>
+    <style>
+           
+   table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+     
+    td, th {
+      border: 1px solid #0e0d0d;
+      text-align: left;
+      padding: 8px;
+    }
+    tr,th{
+        background-color: white;
+    }
+     
+    tr:nth-child(even) {
+      background-color:bisque;
+    }
+    tr:nth-child(odd) {
+      background-color:aliceblue;
+    }
+    </style>
+
+    <tr>
+        
+        <th>StudentName</th>
+        <th>Address</th>    
+        <th>Email</th>
+        <th>ContactNo.</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let student of student'>
+            
+            <td>{{student.userName}}</td>
+            <td>{{student.userAddress}}</td>
+            <td>{{student.userEmail}}</td>
+            <td>{{student.userMobile}}</td>
+        </tr>
+    </tbody>
+    </table>

@@ -1,0 +1,115 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<title>Admin Login Form</title>
+<style>
+
+input[type=text],select
+{
+    width:70%;
+    background-color:bisque;
+color:saddlebrown;
+padding: 12px20px;
+margin:8px0;
+display: inline-block;
+border:2pxsolidbrown;
+border-radius: 4px;
+box-sizing:border-box;
+         }
+
+input[type=email],select
+{
+width:70%;
+background-color:bisque;
+color:saddlebrown;
+padding: 12px20px;
+margin:8px0;
+display: inline-block;
+border:2pxsolidbrown;
+border-radius: 4px;
+box-sizing:border-box;
+         }
+input[type=password],select
+{
+width:70%;
+background-color:bisque;
+color:saddlebrown;
+padding: 12px20px;
+margin:8px0;
+display: inline-block;
+border:2pxsolidbrown;
+border-radius: 4px;
+box-sizing:border-box;
+         }
+input[type=number],select
+         {
+width:70%;
+background-color:bisque;
+color:saddlebrown;
+padding: 12px20px;
+margin:8px0;
+display: inline-block;
+border:2pxsolidbrown;
+border-radius: 4px;
+box-sizing:border-box;
+         }
+body
+         {
+
+background-color:rgb(141, 173, 201);
+text-align: center;
+width: 100%;
+         }
+        div
+         {
+                align-content: center;
+         }
+
+</style>
+</head>
+ 
+<body>
+<h3 style="text-align: center;"><i class="fa fa-align-center"aria-hidden="true">Enter Your Details</i></h3><br><br><br>
+<div class="form">
+<form action="POST" #addForm='ngForm'(ngSubmit)='addForm.valid && loginAdmin()'>
+<div class="form-group">
+    <label for="name">Your Name :</label>
+    <input type="text" name="name" id="name" required [(ngModel)]='admin.adminName' #name=ngModel class="form-control" placeholder="enter your name" aria-describedby="helpId" >
+   <!-- <div [hidden]="name.valid || name.pristine"><h5 style="color: red;font-style: italic;">***Name is required***</h5></div>-->
+   <div style="color: red" *ngIf="name.errors && addForm.submitted">Name is required</div> 
+    <br>
+    <br>
+    <label for="password">Password :</label>
+    <input type="password" name="password" id="password" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" ngModel passwordToggle required [(ngModel)]='admin.adminEmail' #password=ngModel class="form-control" placeholder="enter password" aria-describedby="helpId" >
+    <div style="color: red" *ngIf="password.errors && addForm.submitted">Password is required & Put the correct format password</div>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-primary">Login</button>
+
+    <ng-container  *ngIf="islogin" >
+        <a [routerLink] = '"/afteradminlogin"'>Admin Controls</a>
+    </ng-container>
+      <ng-template #elseBlock>
+        <a [routerLink] = '"/dashboard"'>Back to Dashboard </a>
+      </ng-template>
+
+    </div>
+    </form>
+    </div>
+    <!--<ng-template  [ngIf]="islogin" [ngIfThen]="thenBlock" [ngIfElse]="elseBlock">
+    </ng-template>
+    <ng-template #thenBlock>
+        <a [routerLink] = '"/afteradminlogin"'>Admin Controls</a>
+      </ng-template>
+      <ng-template #elseBlock>
+        <a [routerLink] = '"/dashboard"'>Back to Dashboard</a>
+      </ng-template>-->
+    <br><br>
+    <a [routerLink] = '"/dashboard"'>Go to Dashboard</a>
+    </body>
+    </html>
