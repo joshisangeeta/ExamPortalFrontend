@@ -8,12 +8,18 @@ import { Question } from '../question';
   styleUrls: ['./questionbank.component.css']
 })
 export class QuestionbankComponent implements OnInit {
-  question:Question[]
+  questions:Question[]
+  qid:number;
   constructor(private dataService:ExamService) { }
 
   ngOnInit(): void {
 
-    this.dataService.viewQuestionBank().subscribe(question=>this.question=question);
+    this.dataService.viewQuestionBank().subscribe(questions=>this.questions=questions);
+  }
+
+  deleteQuestion(qid:number){
+    alert("press ok to confirm");
+    this.dataService.deleteQuestions(qid).subscribe(questions=>this.questions=questions);
   }
 
 }

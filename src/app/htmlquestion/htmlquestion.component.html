@@ -37,16 +37,19 @@
     </tr>
     </thead>
     <tbody>
-        <tr *ngFor='let question of questions'>
+        <tr *ngFor='let htmlquestion of htmlquestions'>
             
-            <td>{{question.questions}}</td>
-            <td>{{question.optionA}}</td>
-            <td>{{question.optionB}}</td>
-            <td>{{question.optionC}}</td>
-            <td>{{question.optionD}}</td>
-            <td>{{question.correctAns}}</td>
-            <td><button  type="button" class="btn btn-link" (click) = "deleteQuestion(question.qid)"><b>Delete Question</b></button></td>
+            <td>{{htmlquestion.questions}}</td>
+            <td>{{htmlquestion.optionA}}</td>
+            <td>{{htmlquestion.optionB}}</td>
+            <td>{{htmlquestion.optionC}}</td>
+            <td>{{htmlquestion.optionD}}</td>
+            <td>{{htmlquestion.correctAns}}</td>
+            <td><button  type="button" class="btn btn-link" (click) = "deleteHQuestion(htmlquestion.qid)"><b>Delete Question</b></button></td>
         </tr>
     </tbody>
     </table>
+
     <a [routerLink] = '"/afteradminlogin"'><h2 style="text-align: center;color: black;">Go to Controls</h2></a><br>
+
+

@@ -89,13 +89,13 @@ width: 100%;
     <div style="color: red" *ngIf="password.errors && addForm.submitted">Password is required & Put the correct format password</div>
     <br>
     <br>
-    <button type="submit" class="btn btn-primary">Login</button>
+    <button type="submit" class="btn btn-primary">Login</button><br>
 
     <ng-container  *ngIf="islogin" >
-        <a [routerLink] = '"/afteradminlogin"'>Admin Controls</a>
+        <a [routerLink] = '"/afteradminlogin"'><h3 style="color: black;">Admin Controls</h3></a>
     </ng-container>
       <ng-template #elseBlock>
-        <a [routerLink] = '"/dashboard"'>Back to Dashboard </a>
+        <a [routerLink] = '"/dashboard"'><h3 style="color: black;">Back to Dashboard</h3></a>
       </ng-template>
 
     </div>
@@ -110,6 +110,6 @@ width: 100%;
         <a [routerLink] = '"/dashboard"'>Back to Dashboard</a>
       </ng-template>-->
     <br><br>
-    <a [routerLink] = '"/dashboard"'>Go to Dashboard</a>
+    <a [routerLink] = '"/dashboard"'><h3 style="color: black;">Go to Dashboard</h3></a>
     </body>
     </html>

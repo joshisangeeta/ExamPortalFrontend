@@ -68,45 +68,45 @@ width: 100%;
 <body>
 <h3 style="text-align: center;"><i class="fa fa-align-center"aria-hidden="true">Enter Question Details</i></h3>
 <div class="form">
-<form #addForm='ngForm'(ngSubmit)='addForm.valid && addQuestion()'>
+<form #addForm='ngForm'(ngSubmit)='addForm.valid && addQuestions()'>
 <div class="form-group">
 <label for="questions">Question : </label>
-<input type="text" name="questions" id="questions" required [(ngModel)]='question.questions' #questions=ngModel class="form-control" placeholder="enter question" aria-describedby="helpId">
+<input type="text" name="questions" id="questions" required [(ngModel)]='htmlquestion.questions' #questions=ngModel class="form-control" placeholder="enter question" aria-describedby="helpId">
 <!--div [hidden]="name.valid || name.pristine"><h5 style="color: red; font-style: italic;">***Name is required***</h5></div>-->
 <div style="color: red" *ngIf="questions.errors && addForm.submitted">Question is required</div>
 <br>
 <br>
 <br>
 <label for="optionA">Option A : </label>
-<input type="text" name="optionA" id="optionA" required [(ngModel)]='question.optionA' #optionA=ngModel class="form-control" placeholder="enter option A" aria-describedby="helpId">
+<input type="text" name="optionA" id="optionA" required [(ngModel)]='htmlquestion.optionA' #optionA=ngModel class="form-control" placeholder="enter option A" aria-describedby="helpId">
 <!--div [hidden]="name.valid || name.pristine"><h5 style="color: red; font-style: italic;">***Name is required***</h5></div>-->
 <div style="color: red" *ngIf="optionA.errors && addForm.submitted">OptionA is required</div>
 <br>
 <br>
 <br>
 <label for="optionB">Option B : </label>
-<input type="text" name="optionB" id="optionB" required [(ngModel)]='question.optionB' #optionB=ngModel class="form-control" placeholder="enter option B"aria-describedby="helpId">
+<input type="text" name="optionB" id="optionB" required [(ngModel)]='htmlquestion.optionB' #optionB=ngModel class="form-control" placeholder="enter option B"aria-describedby="helpId">
 <!--div [hidden]="name.valid || name.pristine"><h5 style="color: red; font-style: italic;">***Name is required***</h5></div>-->
 <div style="color: red" *ngIf="optionB.errors && addForm.submitted">OptionB is required</div>
 <br>
 <br>
 <br>
 <label for="optionC">Option C : </label>
-<input type="text" name="optionC" id="optionC" required [(ngModel)]='question.optionC' #optionC=ngModel class="form-control" placeholder="enter option C" aria-describedby="helpId">
+<input type="text" name="optionC" id="optionC" required [(ngModel)]='htmlquestion.optionC' #optionC=ngModel class="form-control" placeholder="enter option C" aria-describedby="helpId">
 <!--div [hidden]="name.valid || name.pristine"><h5 style="color: red; font-style: italic;">***Name is required***</h5></div>-->
 <div style="color: red" *ngIf="optionC.errors && addForm.submitted">OptionC is required</div>
 <br>
 <br>
 <br>
 <label for="optionD">Option D : </label>
-<input type="text" name="optionD" id="optionD" required [(ngModel)]='question.optionD' #optionD=ngModel class="form-control" placeholder="enter option D" aria-describedby="helpId">
+<input type="text" name="optionD" id="optionD" required [(ngModel)]='htmlquestion.optionD' #optionD=ngModel class="form-control" placeholder="enter option D" aria-describedby="helpId">
 <!--div [hidden]="name.valid || name.pristine"><h5 style="color: red; font-style: italic;">***Name is required***</h5></div>-->
 <div style="color: red" *ngIf="optionD.errors && addForm.submitted">OptionD is required</div>
 <br>
 <br>
 <br>
 <label for="correctAns">Correct Ans. </label>
-<input type="text" name="correctAns" id="correctAns" required [(ngModel)]='question.correctAns' #correctAns=ngModel class="form-control" placeholder="enter correct answer" aria-describedby="helpId">
+<input type="text" name="correctAns" id="correctAns" required [(ngModel)]='htmlquestion.correctAns' #correctAns=ngModel class="form-control" placeholder="enter correct answer" aria-describedby="helpId">
 <!--div [hidden]="name.valid || name.pristine"><h5 style="color: red; font-style: italic;">***Name is required***</h5></div>-->
 <div style="color: red" *ngIf="correctAns.errors && addForm.submitted">Correct Ans is required</div>
 <br>
@@ -119,6 +119,7 @@ width: 100%;
 </div>
 <br><br>
 
-<a [routerLink] = '"/afteradminlogin"'><h3 style="color: black;">Go To Controls</h3></a>
+<a [routerLink] = '"/afteradminlogin"'><h3 style="color: black;">Go to Controls</h3></a>
 </body>
 </html>
+

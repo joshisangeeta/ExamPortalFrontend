@@ -91,17 +91,18 @@ width: 100%;
     <div style="color: red" *ngIf="password.errors && addForm.submitted">Password is required & Put Correct Password</div>
     <br>     
     <br>
-    <button type="submit" class="btn btn-primary">Login</button>
+    <button type="submit" class="btn btn-primary">Login</button><br><br><br>
    <!-- <a routerLink] = '"/forgetpassword"'>ForgetPassword</a>-->
     </div>
     </form>
     </div>
     <ng-container  *ngIf="islogin" >
-        <a [routerLink] = '"/javatest"' style="color: black;"><b>Take Java Test</b></a>
+        <a [routerLink] = '"/javatest"' style="color: black;"><b><h3>Take JAVA Test</h3></b></a><br>
+        <a [routerLink] = '"/htmltest"' style="color: black;"><b><h3>Take HTML Test</h3></b></a><br>
     </ng-container>
       
-        <a [routerLink] = '"/dashboard"'>Back to Dashboard </a>
+        <a [routerLink] = '"/dashboard"'><h3 style="color: black;">Back to Dashboard</h3> </a>
     <br><br>
-    <a [routerLink] = '"/studentregistration"' style="color: black;"><b>Click Here To Register</b></a><br> 
+    <a [routerLink] = '"/studentregistration"' style="color: black;"><b> <h3 style="color: black;">Click Here To Register</h3></b></a><br> 
     </body>
     </html>

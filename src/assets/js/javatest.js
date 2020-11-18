@@ -45,14 +45,14 @@ function name()
         correctAnswer: 'b'
         },
         {
-        question: "2. Hyper Text Markup Language Stand For?",
+        question: "2. Which of these can be returned by the operator &?",
         answers: {
-        a: 'javascript'+"<br>",
-        b: 'CSS'+"<br>",
-        c: 'HTML' +"<br>",
-        d: 'XHTML'
+        a: 'Integer'+"<br>",
+        b: 'Boolean'+"<br>",
+        c: 'Character' +"<br>",
+        d: 'Integer or Boolean'
         },
-        correctAnswer: 'c'
+        correctAnswer: 'd'
         },
         {
         question: "3. Which of the following is not a Java features?",

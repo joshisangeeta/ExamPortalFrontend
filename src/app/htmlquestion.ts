@@ -1,4 +1,4 @@
-export class Question
+export class HtmlQuestion
 {
     qid:number;
     questions:string;

@@ -108,7 +108,7 @@ width: 100%;
 <br>
 <br>
 <label for="mobile">Contact</label>
-<input type="tel" name="mobile" id="mobile" pattern="[0-9]{10}" required [(ngModel)]='student.userMobile' #mobile=ngModel class="form-control" placeholder="enter Contact Number" aria-describedby="helpId" >
+<input type="tel" name="mobile" id="mobile" pattern="[0-9]{10}" required [(ngModel)]='student.userMobile' #mobile=ngModel class="form-control" placeholder="enter Contact Number" aria-describedby="helpId" ><br><br>
 <!--<div [hidden]="mobile.valid || mobile.pristine"><h5 style="color: red; font-style: italic;">***Contact Number is required***</h5></div>-->
 <div style="color: red" *ngIf="mobile.errors && addForm.submitted">Mobile is required</div>
 <br>
@@ -118,6 +118,6 @@ width: 100%;
 </form>
 </div>
 <br><br>
-<a [routerLink] = '"/dashboard"'>Go to Dashboard</a>
+<a [routerLink] = '"/dashboard"'><h2 style="color: black;">Go to Dashboard</h2></a>
 </body>
 </html>

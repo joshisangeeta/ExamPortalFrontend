@@ -21,6 +21,11 @@ import { EnrollmentComponent } from './enrollment/enrollment.component';
 import { QuestionbankComponent } from './questionbank/questionbank.component';
 import { NgxPasswordToggleModule } from 'src/module';
 import { CommonModule } from '@angular/common';
+import { ListquestionbankComponent } from './listquestionbank/listquestionbank.component';
+import { HtmlquestionComponent } from './htmlquestion/htmlquestion.component';
+import { AddquestionlistComponent } from './addquestionlist/addquestionlist.component';
+import { AddhtmlquestionComponent } from './addhtmlquestion/addhtmlquestion.component';
+import { ScoreComponent } from './score/score.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +42,12 @@ import { CommonModule } from '@angular/common';
     ForgetpasswordComponent,
     ListstudentComponent,
     EnrollmentComponent,
-    QuestionbankComponent
+    QuestionbankComponent,
+    ListquestionbankComponent,
+    HtmlquestionComponent,
+    AddquestionlistComponent,
+    AddhtmlquestionComponent,
+    ScoreComponent
   ],
   imports: [
     BrowserModule,

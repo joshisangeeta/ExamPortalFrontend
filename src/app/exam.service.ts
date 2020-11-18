@@ -4,6 +4,7 @@ import { Student } from 'src/student';
 import { Observable } from 'rxjs';
 import { Admin } from 'src/admin';
 import { Question } from './question';
+import { HtmlQuestion } from './htmlquestion';
 
 @Injectable({
   providedIn: 'root'
@@ -36,6 +37,24 @@ export class ExamService {
    viewQuestionBank():Observable<any>{
      return this.http.get(this.url.concat('/viewallquestion'))
    }
+
+   deleteQuestions(qid:number):Observable<any>{
+    let appendUrl = this.url.concat('/deletequestion/afterdelete/')+qid+'';
+    return this.http.get(appendUrl);
+  }
+
+  deleteHQuestions(qid:number):Observable<any>{
+    let appendUrl = this.url.concat('/deletehquestion/afterhdelete/')+qid+'';
+    return this.http.get(appendUrl);
+  }
+
+  viewHQuestionBank():Observable<any>{
+    return this.http.get(this.url.concat('/viewallhquestion'))
+  }
+
+  addHQuestion(htmlquestion:HtmlQuestion):Observable<any>{
+    return this.http.post(this.url.concat('/addhquestion/'),htmlquestion);
+  }
 
    
 }
