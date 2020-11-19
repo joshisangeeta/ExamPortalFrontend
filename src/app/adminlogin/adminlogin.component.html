@@ -78,7 +78,7 @@ width: 100%;
 <div class="form">
 <form action="POST" #addForm='ngForm'(ngSubmit)='addForm.valid && loginAdmin()'>
 <div class="form-group">
-    <label for="name">Your Name :</label>
+    <label for="name">Full Name :</label>
     <input type="text" name="name" id="name" required [(ngModel)]='admin.adminName' #name=ngModel class="form-control" placeholder="enter your name" aria-describedby="helpId" >
    <!-- <div [hidden]="name.valid || name.pristine"><h5 style="color: red;font-style: italic;">***Name is required***</h5></div>-->
    <div style="color: red" *ngIf="name.errors && addForm.submitted">Name is required</div> 
@@ -92,7 +92,7 @@ width: 100%;
     <button type="submit" class="btn btn-primary">Login</button><br>
 
     <ng-container  *ngIf="islogin" >
-        <a [routerLink] = '"/afteradminlogin"'><h3 style="color: black;">Admin Controls</h3></a>
+        <a [routerLink] = '"/afteradminlogin"'><h3 style="color: black;">My Account</h3></a>
     </ng-container>
       <ng-template #elseBlock>
         <a [routerLink] = '"/dashboard"'><h3 style="color: black;">Back to Dashboard</h3></a>

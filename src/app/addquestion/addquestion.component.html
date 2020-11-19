@@ -66,7 +66,7 @@ width: 100%;
 </head>
  
 <body>
-<h3 style="text-align: center;"><i class="fa fa-align-center"aria-hidden="true">Enter Question Details</i></h3>
+<h3 style="text-align: center;"><i class="fa fa-align-center"aria-hidden="true">Enter Question Details(All fields are mandatory)</i></h3>
 <div class="form">
 <form #addForm='ngForm'(ngSubmit)='addForm.valid && addQuestion()'>
 <div class="form-group">
@@ -119,6 +119,6 @@ width: 100%;
 </div>
 <br><br>
 
-<a [routerLink] = '"/afteradminlogin"'><h3 style="color: black;">Go To Controls</h3></a>
+<a [routerLink] = '"/afteradminlogin"'><h3 style="color: black;">Go Back to My Account</h3></a>
 </body>
 </html>

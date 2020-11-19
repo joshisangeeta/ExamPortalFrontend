@@ -26,6 +26,7 @@ import { HtmlquestionComponent } from './htmlquestion/htmlquestion.component';
 import { AddquestionlistComponent } from './addquestionlist/addquestionlist.component';
 import { AddhtmlquestionComponent } from './addhtmlquestion/addhtmlquestion.component';
 import { ScoreComponent } from './score/score.component';
+import { AfterstudentloginComponent } from './afterstudentlogin/afterstudentlogin.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { ScoreComponent } from './score/score.component';
     HtmlquestionComponent,
     AddquestionlistComponent,
     AddhtmlquestionComponent,
-    ScoreComponent
+    ScoreComponent,
+    AfterstudentloginComponent
   ],
   imports: [
     BrowserModule,

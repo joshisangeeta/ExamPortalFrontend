@@ -3,7 +3,7 @@ function namehtml()
   alert("Are you ready to take test?");
   
 
-  var countDownDate = new Date("Nov 19, 2020 15:00:00").getTime();
+  var countDownDate = new Date("Nov 19, 2020 15:10:00").getTime();
     
     // Update the count down every 1 second
     var x = setInterval(function() {
@@ -19,12 +19,12 @@ function namehtml()
       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      var seconds = Math.floor((distance % (1000 * 60)) / 2000);
         
       // Output the result in an element with id="demo"
-      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-      + minutes + "m " + seconds + "s ";
-      //document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
+     // document.getElementById("demo").innerHTML = "Time left :" + days + "d " + hours + "h "
+     // + minutes + "m " + seconds + "s ";
+      document.getElementById("demo").innerHTML = "Time left :" + minutes + "m " + seconds + "s ";
       // If the count down is over, write some text 
       if (distance < 0) {
         clearInterval(x);
@@ -203,7 +203,7 @@ answerContainers[i].style.color = 'red';
 }
 }
 // show number of correct answers out of total
-scoreContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+scoreContainer.innerHTML = "Thank you for taking the assessment and your score is : " +numCorrect + ' out of ' + questions.length;
 }
 // show questions right away
 showQuestions(questions, quizContainer);
